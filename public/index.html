@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Didi Store | طلب المخبوزات الصحية</title>
+  <meta name="description" content="اطلب مخبوزات Didi Store الصحية والأسبوعية مباشرة عبر النموذج وواتساب.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-mark">DS</span><span><strong>Didi Store</strong><small>مخبوزات صحية وطازجة</small></span></a>
+    <a class="phone-link" href="tel:01008597069" dir="ltr">01008597069</a>
+  </header>
+  <main class="shell">
+    <section class="intro">
+      <div class="intro-copy">
+        <p class="eyebrow">طلب مباشر من مصنع النيل الأبيض</p>
+        <h1>احجز مخبوزات الأسبوع في دقائق</h1>
+        <p class="lead">اختر الباقات أو المنتجات، اكتب بيانات التوصيل، وسيتم إرسال الطلب مباشرة إلى واتساب المتجر على رقم 01008597069 مع حفظ نسخة في الخلفية.</p>
+        <div class="quick-facts"><span>طازج</span><span>مناسب للفريزر</span><span>تأكيد عبر واتساب</span></div>
+      </div>
+      <img class="intro-image" src="/assets/bread-pattern.svg" alt="مخبوزات طازجة">
+    </section>
+    <form id="orderForm" class="order-layout">
+      <div class="form-flow">
+        <section class="panel"><div class="section-title"><span>1</span><h2>بيانات التوصيل</h2></div><div class="fields two"><label>الاسم بالكامل<input id="customerName" autocomplete="name" required placeholder="مثال: أحمد محمد علي"></label><label>رقم الجوال / واتساب<input id="customerPhone" inputmode="tel" autocomplete="tel" required dir="ltr" placeholder="01xxxxxxxxx"></label></div><label>العنوان بالتفصيل<textarea id="customerAddress" required rows="3" placeholder="الحي، الشارع، العمارة، الدور، الشقة"></textarea></label></section>
+        <section class="panel"><div class="section-title"><span>2</span><h2>باقات التوفير الأسبوعية</h2></div><div id="packages" class="cards-grid"></div></section>
+        <section class="panel"><div class="section-title"><span>3</span><h2>منتجات فردية</h2></div><div id="tabs" class="tabs"></div><div id="products" class="product-list"></div></section>
+        <section class="panel"><div class="section-title"><span>4</span><h2>ملاحظات الطلب</h2></div><textarea id="notes" rows="3" placeholder="أي طلبات خاصة بالتوصيل أو التغليف"></textarea></section>
+      </div>
+      <aside class="summary"><div class="summary-box"><div><p class="muted">إجمالي الطلب</p><strong id="total">0 جنيه</strong></div><div id="summaryItems" class="summary-items"><p class="empty">لم يتم اختيار منتجات بعد.</p></div><button class="submit-btn" type="submit"><span>إرسال الطلب على واتساب</span></button><a class="secondary-action" href="https://wa.me/201008597069" target="_blank" rel="noreferrer">مراسلة المتجر مباشرة</a><p id="formMessage" class="form-message" role="status"></p></div></aside>
+    </form>
+  </main>
+  <div id="successModal" class="modal" hidden><div class="modal-dialog"><button id="closeModal" class="icon-btn" type="button" aria-label="إغلاق">×</button><h2>تم تجهيز الطلب</h2><p>تم حفظ الطلب، وسيتم فتح واتساب لإرسال التفاصيل إلى Didi Store.</p><a id="whatsappLink" class="submit-btn" target="_blank" rel="noreferrer">فتح واتساب الآن</a></div></div>
+  <script src="/app.js"></script>
+</body>
+</html>
